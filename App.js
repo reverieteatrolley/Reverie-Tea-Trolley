@@ -2,34 +2,64 @@ import React from 'react';
 
 function App() {
   return (
-    <div style={{ fontFamily: 'sans-serif', backgroundColor: '#fff0f5', minHeight: '100vh', color: '#333' }}>
-      <header style={{ backgroundColor: '#fff', padding: '1rem 2rem', borderBottom: '1px solid #f5cfd5', position: 'sticky', top: 0 }}>
-        <h1 style={{ color: '#c44569', fontWeight: 'bold', fontSize: '1.75rem' }}>Reverie Tea Trolley</h1>
+    <div className="site-wrapper" style={{ fontFamily: 'serif', background: '#fdf9f5', color: '#3d3d3d' }}>
+      <header style={{ background: '#fff', borderBottom: '1px solid #dfd3c3', padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h1 style={{ color: '#b08eae', fontSize: '1.75rem' }}>Reverie Tea Trolley</h1>
+        <nav>
+          <a href="#about" style={{ margin: '0 1rem', color: '#8c7f6a' }}>About</a>
+          <a href="#packages" style={{ margin: '0 1rem', color: '#8c7f6a' }}>Packages</a>
+          <a href="#book" style={{ margin: '0 1rem', color: '#8c7f6a' }}>Book</a>
+        </nav>
       </header>
 
-      <main style={{ textAlign: 'center', padding: '4rem 2rem' }}>
-        <h2 style={{ color: '#e84393', fontSize: '2rem', marginBottom: '1rem' }}>
-          A Parisian-Inspired Tea Experience on Wheels
-        </h2>
-        <p style={{ fontSize: '1rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
-          Join us for luxury afternoon tea seatings across South Florida. Elegant, unforgettable, and designed for the modern romantic.
+      <section className="hero-section" style={{ textAlign: 'center', padding: '4rem 2rem', background: '#f6f1eb' }}>
+        <h2 style={{ fontSize: '2.5rem', color: '#a1729e' }}>A Whimsical Tea Experience</h2>
+        <p style={{ maxWidth: '600px', margin: '1rem auto', fontSize: '1.1rem' }}>
+          Step into a floral dream with South Florida’s first luxury mobile tea salon. Draped in sage, mauve, and gold—our trolley was designed for modern romantics.
         </p>
+      </section>
 
-        <form style={{ maxWidth: '400px', margin: '2rem auto', textAlign: 'left' }}>
-          <label>Name</label>
-          <input type="text" placeholder="Your name" style={{ width: '100%', padding: '10px', marginBottom: '10px' }} />
-          <label>Email</label>
-          <input type="email" placeholder="Your email" style={{ width: '100%', padding: '10px', marginBottom: '10px' }} />
-          <label>Guests</label>
-          <input type="number" min="1" max="20" placeholder="Number of guests" style={{ width: '100%', padding: '10px', marginBottom: '20px' }} />
-          <button type="submit" style={{ backgroundColor: '#e84393', color: 'white', padding: '10px 20px', border: 'none', cursor: 'pointer' }}>
-            Request Reservation
-          </button>
-        </form>
-      </main>
+      <section id="about" style={{ padding: '3rem 2rem', background: '#fff' }}>
+        <h3 style={{ fontSize: '1.75rem', color: '#b08eae', textAlign: 'center' }}>About Reverie</h3>
+        <p style={{ maxWidth: '700px', margin: '1rem auto', fontSize: '1.05rem', textAlign: 'center' }}>
+          Reverie Tea Trolley is a mobile tea lounge designed with bridal parties, birthdays, and boutique celebrations in mind. Our Parisian-inspired interior offers a lush escape with custom florals and vintage charm.
+        </p>
+      </section>
+
+      <section id="packages" style={{ padding: '3rem 2rem', background: '#fdf9f5' }}>
+        <h3 style={{ fontSize: '1.75rem', color: '#a1729e', textAlign: 'center' }}>Our Packages</h3>
+        <ul style={{ listStyle: 'none', padding: 0, maxWidth: '800px', margin: '2rem auto' }}>
+          <li style={{ marginBottom: '2rem' }}>
+            <h4 style={{ fontSize: '1.25rem', color: '#8c7f6a' }}>The Signature Tea</h4>
+            <p>90 minutes | $95 per guest<br />Includes signature tea service, sweets, and table styling.</p>
+          </li>
+          <li style={{ marginBottom: '2rem' }}>
+            <h4 style={{ fontSize: '1.25rem', color: '#8c7f6a' }}>The Bridal Bliss</h4>
+            <p>2 hours | $120 per guest<br />Champagne, floral headbands, and keepsake favors included.</p>
+          </li>
+          <li>
+            <h4 style={{ fontSize: '1.25rem', color: '#8c7f6a' }}>Private Charter</h4>
+            <p>Custom pricing<br />Rent the entire trolley for events or styled shoots.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="book" style={{ padding: '3rem 2rem', background: '#fff' }}>
+        <h3 style={{ fontSize: '1.75rem', color: '#b08eae', textAlign: 'center' }}>Book Your Tea Time</h3>
+        <div style={{ maxWidth: '600px', margin: '2rem auto', border: '1px solid #e0dede', borderRadius: '10px', padding: '1rem' }}>
+          <iframe
+            src="https://calendly.com/reverieteatrolley"
+            width="100%"
+            height="600"
+            frameBorder="0"
+            title="Reverie Booking"
+            style={{ borderRadius: '8px' }}
+          ></iframe>
+        </div>
+      </section>
 
       <footer style={{ textAlign: 'center', fontSize: '0.9rem', padding: '2rem', color: '#777' }}>
-        &copy; 2025 Reverie Tea Trolley. All rights reserved.
+        &copy; 2025 Reverie Tea Trolley | Designed with love in mauve + gold
       </footer>
     </div>
   );
