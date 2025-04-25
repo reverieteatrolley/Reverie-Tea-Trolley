@@ -1,6 +1,6 @@
 {
-  "name": "reverie-tea-trolley",
-  "version": "0.1.0",
+  "name": "reverie-tea-trolley-clean",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
